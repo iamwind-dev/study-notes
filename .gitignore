@@ -7,6 +7,9 @@
 !src/pages/
 !src/services/
 !src/data/
+!screenshots/
+!image/
+
 
 # Whitelist specific files
 !src/App.tsx
@@ -20,6 +23,8 @@
 !capacitor.config.ts
 !README.md
 !.gitignore
+!screenshots/*.png
+
 
 # Always ignore these
 node_modules/
