@@ -97,54 +97,21 @@ npx cap run android
 ## Screenshots
 
 ### Màn hình Home
+
 *Hình 1: Danh sách các môn học với thiết kế card hiện đại*
 ![1763000721528](image/README/1763000721528.png)
 
 ### Màn hình Notes - Danh sách ghi chú
+
 *Hình 2: Hiển thị các ghi chú đã lưu của môn học*
 ![1763000738791](image/README/1763000738791.png)
 
 ### Màn hình Notes - Thêm ghi chú
+
 *Hình 3: Form nhập ghi chú mới với validation*
 ![1763000850202](image/README/1763000850202.png)
 
 ### Màn hình Notes - Chỉnh sửa ghi chú
+
 *Hình 4: Modal chỉnh sửa nội dung ghi chú*
 ![1763000866214](image/README/1763000866214.png)
-
-## Công nghệ sử dụng
-
-- **Framework**: Ionic 8.5.0 + React 19.0.0
-- **Build Tool**: Vite
-- **Mobile Framework**: Capacitor 7.4.4
-- **Storage**: @capacitor/preferences 7.0.2
-- **Routing**: React Router 5.3.4
-- **Language**: TypeScript 5.1.6
-
-## Cấu trúc dự án
-
-```
-study-notes/
-├── src/
-│   ├── App.tsx                    # Component chính
-│   ├── data/
-│   │   └── subjects.ts            # Danh sách môn học
-│   ├── pages/
-│   │   ├── Home.tsx               # Trang chủ
-│   │   ├── Home.css               # Styles trang chủ
-│   │   ├── Notes.tsx              # Trang ghi chú
-│   │   └── Notes.css              # Styles trang ghi chú
-│   └── services/
-│       └── notesStorage.ts        # Service lưu trữ
-├── capacitor.config.ts            # Cấu hình Capacitor
-├── package.json                   # Dependencies
-└── README.md                      # Tài liệu
-```
-
-## Tác giả
-
-**Đinh Lê Thái Dương** - 22IT056 - Lớp 22SE2
-
----
-
-*Đồ án giữa kỳ môn Phát triển ứng dụng di động nâng cao - HK7*
