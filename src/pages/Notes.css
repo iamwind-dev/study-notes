@@ -1,0 +1,599 @@
+/* Notes Container */
+.notes-content {
+  --background: #f5f7fa;
+}
+
+.notes-container {
+  padding: 0;
+  padding-bottom: 80px;
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header Stats */
+.notes-header {
+  background: linear-gradient(135deg, var(--ion-color-primary) 0%, var(--ion-color-secondary) 100%);
+  color: white;
+  padding: 32px 16px;
+  margin: 0;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(56, 128, 255, 0.3);
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.notes-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
+
+.notes-header p {
+  font-size: 16px;
+  opacity: 0.95;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Stats Summary */
+.stats-summary {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  margin: 0;
+}
+
+.stat-item {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(56, 128, 255, 0.15);
+}
+
+.stat-item ion-icon {
+  font-size: 32px;
+  color: var(--ion-color-primary);
+  flex-shrink: 0;
+}
+
+.stat-info h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #1a202c;
+}
+
+.stat-info p {
+  font-size: 13px;
+  margin: 4px 0 0 0;
+  color: #718096;
+}
+
+.stats-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stats-icon {
+  font-size: 48px;
+  color: white;
+}
+
+/* Add Note Card */
+.add-note-card {
+  margin: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background: white;
+  width: calc(100% - 32px);
+}
+
+.add-note-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.add-icon {
+  font-size: 24px;
+  color: var(--ion-color-primary);
+}
+
+.add-note-header h3 {
+  margin: 0;
+  color: var(--ion-color-dark);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.input-item {
+  --background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+.input-item ion-textarea {
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  font-size: 15px;
+}
+
+.add-button {
+  margin-top: 8px;
+  --border-radius: 12px;
+  font-weight: 600;
+  text-transform: none;
+  height: 48px;
+}
+
+/* Notes List Section */
+.notes-list-section {
+  padding: 0 16px 16px;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.empty-icon {
+  font-size: 80px;
+  color: var(--ion-color-medium);
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ion-color-dark);
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--ion-color-medium);
+}
+
+@media (min-width: 768px) {
+  .empty-state {
+    padding: 80px 40px;
+  }
+  
+  .empty-icon {
+    font-size: 100px;
+  }
+  
+  .empty-state h3 {
+    font-size: 24px;
+  }
+  
+  .empty-state p {
+    font-size: 16px;
+  }
+}
+
+/* Notes Grid */
+.notes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Large Mobile / Small Tablet */
+@media (min-width: 577px) {
+  .notes-header {
+    padding: 40px 24px;
+  }
+
+  .stats-summary {
+    padding: 20px 24px;
+    gap: 16px;
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .notes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+  }
+
+  .notes-header {
+    margin: 0 -32px 0 -32px;
+    width: calc(100% + 64px);
+    padding: 60px 32px;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .notes-header h1 {
+    font-size: 40px;
+  }
+
+  .notes-header p {
+    font-size: 18px;
+  }
+
+  .hero-icon {
+    font-size: 80px;
+  }
+
+  .stats-summary {
+    padding: 0;
+    margin: 24px 0 32px 0;
+    gap: 20px;
+  }
+
+  .stat-item {
+    padding: 28px 32px;
+    border-radius: 20px;
+  }
+
+  .stat-item ion-icon {
+    font-size: 40px;
+  }
+
+  .stat-info h3 {
+    font-size: 32px;
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+  
+  .add-note-card {
+    max-width: 800px;
+    margin: 16px auto;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .notes-container {
+    max-width: 1400px;
+    padding: 0 48px 80px;
+  }
+
+  .notes-header {
+    margin: 0 -48px 0 -48px;
+    width: calc(100% + 96px);
+    padding: 80px 48px;
+  }
+  .notes-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Note Card */
+.note-card {
+  margin: 0;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.note-card ion-card-content {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Note Card Header */
+.note-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.note-badge {
+  background: linear-gradient(135deg, var(--ion-color-primary) 0%, var(--ion-color-primary-shade) 100%);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(56, 128, 255, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.note-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.note-actions ion-button {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  margin: 0;
+}
+
+.note-actions ion-icon {
+  font-size: 20px;
+}
+
+/* Note Card Content */
+.note-card-content {
+  min-height: 80px;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.note-card-content p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ion-color-dark);
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Note Card Footer */
+.note-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+  color: var(--ion-color-medium);
+  font-size: 13px;
+}
+
+.note-card-footer ion-icon {
+  font-size: 16px;
+}
+
+/* FAB Button */
+ion-fab-button {
+  --background: var(--ion-color-primary);
+  --box-shadow: 0 4px 16px rgba(56, 128, 255, 0.4);
+}
+
+/* Edit Modal */
+/* .edit-modal {
+  --height: auto;
+  --border-radius: 16px 16px 0 0;
+} */
+
+.edit-card {
+  margin: 16px 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.edit-textarea {
+  --background: #f8f9fa;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  font-size: 15px;
+  border-radius: 12px;
+}
+
+.edit-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  color: var(--ion-color-medium);
+  font-size: 13px;
+}
+
+.edit-info ion-icon {
+  font-size: 16px;
+}
+
+.save-button {
+  margin: 16px 0 8px 0;
+  --border-radius: 12px;
+  font-weight: 600;
+  height: 48px;
+  text-transform: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 360px) {
+  .stats-card {
+    padding: 16px;
+  }
+  
+  .stats-icon {
+    font-size: 40px;
+  }
+  
+  .stats-info h2 {
+    font-size: 28px;
+  }
+  
+  .note-badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+  
+  .note-card-content p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .notes-header {
+    padding: 28px 24px;
+  }
+  
+  .stats-card {
+    padding: 24px;
+    max-width: 300px;
+  }
+  
+  .add-note-card {
+    margin: 20px 24px;
+  }
+  
+  .notes-list-section {
+    margin: 0 24px 16px;
+    padding: 0;
+  }
+  
+  .notes-grid {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .notes-header {
+    padding: 32px 24px;
+  }
+  
+  .stats-card {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .note-card-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  
+  .note-badge {
+    font-size: 13px;
+    padding: 6px 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .note-card:hover .note-badge {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(56, 128, 255, 0.4);
+  }
+  
+  .notes-grid {
+    gap: 24px;
+  }
+  
+  .add-note-card {
+    margin: 20px auto;
+  }
+  
+  .notes-list-section {
+    margin: 0 auto 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .notes-header {
+    padding: 36px 32px;
+  }
+  
+  .notes-container {
+    max-width: 1800px;
+  }
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.note-card {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Loading State */
+.notes-grid > * {
+  animation: slideIn 0.4s ease-out backwards;
+}
+
+.notes-grid > *:nth-child(1) { animation-delay: 0.05s; }
+.notes-grid > *:nth-child(2) { animation-delay: 0.1s; }
+.notes-grid > *:nth-child(3) { animation-delay: 0.15s; }
+.notes-grid > *:nth-child(4) { animation-delay: 0.2s; }
+.notes-grid > *:nth-child(5) { animation-delay: 0.25s; }
+.notes-grid > *:nth-child(6) { animation-delay: 0.3s; }
